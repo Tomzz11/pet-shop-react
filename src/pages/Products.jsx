@@ -182,7 +182,6 @@ export default function Products() {
             </div>
         </section>
     </main>
-
       {/* Footer */}
     <footer className="bg-slate-900 text-slate-300 text-xs">
         <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
