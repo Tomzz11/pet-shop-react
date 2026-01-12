@@ -46,29 +46,6 @@ export default function Products() {
         <div className="min-h-screen flex flex-col bg-slate-50">
         {/* Header & Navigation */}
         <header className="bg-white shadow">
-        <nav className="bg-white shadow w-full">
-            <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-800 text-sm">PetShop</span>
-            </div>
-
-            <ul className="hidden md:flex items-center gap-6 text-sm font-medium">
-                <Link to="/" className="hover:text-emerald-600">Home</Link>
-                <Link to="/products" className="hover:text-emerald-600">Products</Link>
-                <li><a href="#" className="hover:text-emerald-600">Contact</a></li>
-                <li><a href="#" className="hover:text-emerald-600">About</a></li>
-            </ul>
-
-            <div className="flex items-center gap-3">
-                <button className="px-4 py-2 border rounded-lg text-sm hover:bg-slate-100">
-                    Login
-                </button>
-                <button className="px-4 py-2 bg-emerald-600 text-white text-sm rounded-lg hover:bg-emerald-700">
-                    Register
-                </button>
-            </div>
-        </div>
-        </nav>
         </header>
 
       {/* Main Content */}
