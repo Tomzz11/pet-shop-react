@@ -21,14 +21,14 @@ export default function CartSummary({ total, onCheckout}) {
             <span>${total.toFixed(2)}</span>
         </div>
 
-      
+      <Link to="/Checkout">
         <button 
             className="w-full mt-6 bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900"
             onClick={onCheckout} 
         >
             Checkout
         </button>
-        
+        </Link>
     </div>
     );
 }
