@@ -8,6 +8,8 @@ import Layout from './pages/Layout';
 import UserDashboard from './components/dashboard/UserDashboard';
 import OrderHistory  from './pages/OrderHistory';
 import Checkout from './pages/Checkout';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 const router = createBrowserRouter([
@@ -22,6 +24,8 @@ const router = createBrowserRouter([
       {path:"UserDashboard", element: <UserDashboard />},
       {path:"OrderHistory", element:<OrderHistory/>},
       {path:"Checkout", element:<Checkout/>},
+      {path:"Login", element:<Login/>},
+      {path:"Register", element:<Register/>}
 
     ]
   }
