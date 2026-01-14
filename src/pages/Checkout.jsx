@@ -12,14 +12,7 @@ import {
 } from "@/components/ui/table"
 
 const Checkout = () => {
-  
-  const cartItems = [
-    { id: 1, name: 'pet dog', description: 'สุนัขพันธุ์เล็กนิสัยดี', price: 100 },
-    { id: 2, name: 'pet cat', description: 'แมวขี้อ้อนเลี้ยงง่าย', price: 200 },
-   
-  ];
 
-  const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
     <>
