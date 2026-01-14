@@ -6,7 +6,8 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,  
+  CardAction,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -40,9 +41,26 @@ const Login = () => {
 
   return (
     <div
-      className="flex min-h-screen items-center justify-center p-4 bg-center absolute inset-0 z-0"
+      className="flex min-h-screen gap-5 items-center justify-center p-4 bg-center absolute inset-0 z-0"
       style={{ backgroundImage: "url('/ryan-walton-AbNO2iejoXA-unsplash.jpg')" }}
     >
+      <Card className="w-80"> <CardContent></CardContent>
+  <CardHeader>
+    <CardTitle> Email สำหรับเข้าสู่ระบบ</CardTitle>
+  </CardHeader>
+  <CardContent>
+    
+    <p> <p p className="font-bold">For user</p>  user@maipaws.com</p>
+    <p>password: 123456</p>
+    <p><p className="font-bold">For Admin</p> admin@maipaws.com</p>
+    <p>password: 123456</p>
+    <br />
+    <CardDescription className="text-red-500">
+            หากเข้าใช้งานครั้งแรก กรุณาสมัครสมาชิกก่อน
+          </CardDescription>
+  </CardContent>
+  
+</Card>  
       <Card className="w-[490px] h-[480px]">
         <CardHeader className="mt-15 text-center">
           <CardTitle>Login to your account</CardTitle>
