@@ -63,7 +63,7 @@ export default function AddProduct() {
   return (
     <div className="flex flex-col md:flex-row p-4 md:p-6 gap-6 min-h-screen">
 
-      {/* Sidebar - ใช้ธีมม่วงพาสเทลและสั้นลง (h-fit) */}
+      {/* Sidebar */}
       <aside className="w-full md:w-52 bg-[#ffeecb] p-3 h-fit mt-16 rounded-xl shadow-md self-start">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Products
