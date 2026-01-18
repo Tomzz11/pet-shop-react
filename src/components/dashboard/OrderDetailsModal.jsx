@@ -29,7 +29,7 @@ export default function OrderDetailsModal({ order, onClose}) {
                 </button>
 
                 {/* Header */}
-                <h2 className="text-xl font-bold mb-1">Order #{order.id}</h2>
+                <h2 className="text-xl font-bold mb-1">Order #{order._id}</h2>
 
                 <p className="text-sm text-gray-500 mb-4">
                     Purchase Date: {order.date} • {order.time}
@@ -55,7 +55,10 @@ export default function OrderDetailsModal({ order, onClose}) {
                 <div className="mb-6">
                     <h3 className="font-semibold mb-1">Shipping Address</h3>
                     <p className="text-sm text-gray-600">
-                        {}order.shippingAddress
+                        {order.shippingAddress.address}{" "}
+                        {order.shippingAddress.city}{" "}
+                        {order.shippingAddress.postalCode}{" phone number: "}
+                        {order.shippingAddress.phone}  
                     </p>
                 </div>
 
@@ -83,11 +86,14 @@ export default function OrderDetailsModal({ order, onClose}) {
                 <div className="border-t pt-4 space-y-1 text-sm">
                     <div className="flex justify-between">
                         <span>Subtotal</span>
-                        <span>${order.subtotal.toFixed(2)}</span>
+                        {/* <span>${order.subtotal.toFixed(2)}</span> */}
+                        <span>20</span>
+
                     </div>
                     <div className="flex justify-between ">
                         <span>Shipping</span>
-                        <span>${order.shipping.toFixed(2)}</span>
+                        {/* <span>${order.shipping.toFixed(2)}</span> */}
+                        <span>50</span>
                     </div>
                     <div className="flex justify-between font-semibold">
                         <span>Total</span>
