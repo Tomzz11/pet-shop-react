@@ -1,3 +1,6 @@
+import moment from 'moment';
+
+
 const statusColor = {
     Pending: "bg-yellow-100 text-yellow-700",
     Processing: "bg-blue-100 text-blue-700",
@@ -30,10 +33,11 @@ export default function OrderDetailsModal({ order, onClose}) {
 
                 {/* Header */}
                 <h2 className="text-xl font-bold mb-1">Order #{order._id}</h2>
-
+            
+            {order.purchaseDate && (
                 <p className="text-sm text-gray-500 mb-4">
-                    Purchase Date: {order.date} • {order.time}
-                </p>
+                    Purchase Date: {moment(order.purchaseDate).format('MMMM Do YYYY, h:mm:ss a')}
+                </p>)}
 
                 {/* Status */}
                 <div className="flex gap-2 mb-6">
