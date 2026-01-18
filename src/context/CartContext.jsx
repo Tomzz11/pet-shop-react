@@ -14,7 +14,6 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
-  // โหลด cart จาก localStorage เมื่อเริ่มต้น
   useEffect(() => {
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -27,25 +26,23 @@ export const CartProvider = ({ children }) => {
     }
   }, []);
 
-  // บันทึก cart ลง localStorage ทุกครั้งที่เปลี่ยนแปลง
+  
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // เพิ่มสินค้าลงตะกร้า
+  
   const addToCart = (product, quantity = 1) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find(item => item._id === product._id);
       
       if (existingItem) {
-        // ถ้ามีสินค้านี้อยู่แล้ว เพิ่มจำนวน
         return prevItems.map(item =>
           item._id === product._id
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       } else {
-        // ถ้าไม่มี เพิ่มสินค้าใหม่
         return [...prevItems, { ...product, quantity }];
       }
     });
@@ -53,7 +50,7 @@ export const CartProvider = ({ children }) => {
     toast.success(`เพิ่ม ${product.name} ลงตะกร้าแล้ว`);
   };
 
-
+  
   const removeFromCart = (productId) => {
     setCartItems((prevItems) => {
       const item = prevItems.find(item => item._id === productId);
@@ -64,7 +61,7 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-
+ 
   const updateQuantity = (productId, quantity) => {
     if (quantity < 1) {
       removeFromCart(productId);
@@ -80,12 +77,10 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-
   const clearCart = () => {
     setCartItems([]);
     localStorage.removeItem('cart');
   };
-
 
   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
