@@ -72,7 +72,7 @@ export default function AddProduct() {
         <ul className="space-y-2">
           <li>
             <button
-              onClick={() => navigate("/add-product")}
+              onClick={() => navigate("/admin/products/add")}
               className="flex gap-3 items-center p-2 rounded bg-white/40 w-full text-left font-semibold"
             >
               <div className="w-2 h-2 bg-gray-800 rounded-full" />
@@ -82,7 +82,7 @@ export default function AddProduct() {
 
           <li>
             <button
-              onClick={() => navigate("/AdminProducts")}
+              onClick={() => navigate("/admin/products")}
               className="flex gap-3 items-center p-2 rounded hover:bg-white/30 w-full text-left"
             >
               <div className="w-2 h-2 bg-gray-600 rounded-full" />

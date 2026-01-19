@@ -72,12 +72,12 @@ export const AdminProducts = () => {
         <h2 className="text-2xl font-bold text-center mb-6">Products</h2>
         <ul className="space-y-2">
           <li>
-            <button onClick={() => navigate("/add-product")} className="p-2 rounded hover:bg-white/30 w-full text-left font-medium hover:text-orange-500 font-semibold">
+            <button onClick={() => navigate("/admin/products/add")} className="p-2 rounded hover:bg-white/30 w-full text-left font-medium hover:text-orange-500 font-semibold">
               Add Products
             </button>
           </li>
           <li>
-            <button onClick={() => navigate("/AdminProducts")} className="flex gap-3 items-center p-2 rounded text-indigo-500 bg-sky-400/40 w-full text-left font-semibold">
+            <button onClick={() => navigate("/admin/products")} className="flex gap-3 items-center p-2 rounded text-indigo-500 bg-sky-400/40 w-full text-left font-semibold">
               Manage List
             </button>
           </li>
