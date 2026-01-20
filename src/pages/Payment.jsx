@@ -21,9 +21,9 @@ const Payment = () => {
       price: Number(i.price ?? i.product?.price ?? 0),
       quantity: Number(i.quantity ?? 0),
     }));
-    return { 
-      orderItems: items, 
-      totalPrice: items.reduce((sum, i) => sum + (i.price * i.quantity), 0) 
+    return {
+      orderItems: items,
+      totalPrice: items.reduce((sum, i) => sum + (i.price * i.quantity), 0)
     };
   }, [cartItems]);
 
