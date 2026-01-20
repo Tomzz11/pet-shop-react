@@ -10,7 +10,7 @@ export default defineConfig({
    server: {
     proxy: {
       "/api": {
-        target: config.apiUrl, // 🔥 เปลี่ยนเป็น port backend ของอัส
+        target: config.apiUrl, 
         changeOrigin: true,
         secure: false,
       },
